@@ -22,6 +22,10 @@ Or install it yourself as:
 
     $ gem install spotify-charts
 
+And then require:
+
+    require 'spotify/charts'
+
 ## Usage
 
 Retrieve **Available Countries**
