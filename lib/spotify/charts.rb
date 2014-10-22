@@ -7,19 +7,19 @@ module Spotify
   module Charts
     class << self
       def available_countries
-        client.request('/most_shared/')
+        client.request('/most_viral/')
       end
 
       def available_dates(country)
-        client.request("/most_shared/#{country}/")
+        client.request("/most_viral/#{country}/daily")
       end
 
-      def most_shared(country, date)
-        extract_tracks("/most_shared/#{country}/#{date}")
+      def most_viral(country, date)
+        extract_tracks("/most_viral/#{country}/daily/#{date}")
       end
 
       def most_streamed(country, date)
-        extract_tracks("/most_streamed/#{country}/#{date}")
+        extract_tracks("/most_streamed/#{country}/daily/#{date}")
       end
 
       private
