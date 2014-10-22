@@ -7,11 +7,11 @@ module Spotify
   module Charts
     class << self
       def available_countries
-        client.request('/most_viral/')
+        client.request('/most_streamed/')
       end
 
       def available_dates(country)
-        client.request("/most_viral/#{country}/daily")
+        client.request("/most_streamed/#{country}/daily")
       end
 
       def most_viral(country, date)
