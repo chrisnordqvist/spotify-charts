@@ -11,7 +11,7 @@ module Spotify
       end
 
       def available_dates(country)
-        client.request("/most_streamed/#{country}/daily")
+        client.request("/most_streamed/#{country}/daily") 
       end
 
       def most_viral(country, date)
